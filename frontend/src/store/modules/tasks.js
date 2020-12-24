@@ -24,7 +24,7 @@ const mutations = {
 const actions = {
     async FetchTasks(context) {
         try {
-            const response = await TaskService.tasks()
+            const response = await TaskService.tasks();
             context.commit('SET_TASKS_STATE', response.data);
         } catch (error) {
             console.log(error.response.data);
